@@ -1,2 +1,0 @@
-# Ste-Delivery-Jogos
- 
