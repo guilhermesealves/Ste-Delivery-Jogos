@@ -10,31 +10,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">IGAME</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
+    <?php
+    include "cabecalho.php"
 
-
-
-                </ul>
-                <form action="login.php" method="post" class="d-flex">
-                    <input class="form-control me-2" type="email" placeholder="Email" aria-label="Search">
-                    <input class="form-control me-2" type="password" placeholder="Email" aria-label="Senha">
-                    <button class="btn btn-outline-success me-2" type="submit">Entrar</button>
-
-                    <a href="novo-usuario.php" class="btn btn-outline-primary">Cadastrar</a>
-                </form>
-            </div>
-        </div>
-    </nav>
+    ?>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -53,7 +32,62 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Jogos em Destaque</h1>
+            </div>
+            <div class="col-12 text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, illum dolor? Beatae deserunt voluptatem esse numquam veniam eligendi in veritatis neque voluptatibus soluta, atque odit cumque sunt quo delectus quidem.</p>
+            </div>
+        </div>
+ <hr>
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img-card/Horizon.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img-card/GTA5.jpg " class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img-card/Fifa.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="img-card/uncharted.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
 
 
 
