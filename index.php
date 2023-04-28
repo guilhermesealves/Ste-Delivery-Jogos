@@ -11,7 +11,7 @@
 
 <body>
     <?php
-    include "cabecalho.php"
+    include "cabecalho.php";
 
     ?>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -33,68 +33,38 @@
         </button>
     </div>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1>Jogos em Destaque</h1>
+   <div class="row">
+    <?php
+    $servidor_bd = "127.0.0.1";
+    $usuario_bd = "root";
+    $senha_bd = "";
+    $banco_de_dados = "delivery_jogos_novo";
+
+    $conexao = mysqli_connect($servidor_bd, $usuario_bd, $senha_bd, $banco_de_dados);
+
+    $sql_buscar = "select * from jogo";
+
+    $todo_jogos = mysqli_query($conexao, $sql_buscar);
+
+    while ($um_jogo = mysqli_fetch_assoc($todo_jogos)) :
+    ?>
+        <div class="col-md-3 text-center mb-4">
+                <img src="<?php echo $um_jogo["foto"];?>" class = "img-fluid">
+                <h6 class="mt-3 mb-3"><?php echo $um_jogo["categoria"]?></h6>
+                <h5 class="mt-3 mb-3"><?php echo $um_jogo["titulo"];?></h5>
+                <a href="<?php echo $um_jogo["video"];?>"class="btn btn-outline-primary">Ver mais</a>
             </div>
-            <div class="col-12 text-center">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, illum dolor? Beatae deserunt voluptatem esse numquam veniam eligendi in veritatis neque voluptatibus soluta, atque odit cumque sunt quo delectus quidem.</p>
-            </div>
-        </div>
- <hr>
-        <div class="row">
-            <div class="col-md-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="img-card/Horizon.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="img-card/GTA5.jpg " class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="img-card/Fifa.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="img-card/uncharted.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>  
-        </div>
-    </div>
+        <?php
+    endwhile;
+        ?>
+   </div> 
 
 
 
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

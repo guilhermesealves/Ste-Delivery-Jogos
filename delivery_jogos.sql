@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: ` delivery_jogos`
 --
-CREATE DATABASE IF NOT EXISTS ` delivery_jogos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS ` delivery_jogos_novo` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE ` delivery_jogos`;
 
 -- --------------------------------------------------------
