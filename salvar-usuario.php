@@ -12,10 +12,12 @@
 
     echo "Usuário cadastrado com sucesso!";
 
-    header("location:novo-usuario.php?msg =sucesso");
+    header("location:novo-usuario.php?msg=sucesso");
 
 
     
 
 
     mysqli_close($conexao);
+
+?>

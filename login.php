@@ -11,7 +11,7 @@ $um_usuario = mysqli_query($conexao, $sql_buscar_usuario);
 
 
 if($um_usuario->num_rows > 0){
-    header("location:painel.php");
+    header("location:painel.php");                                   
 }
 
 else{

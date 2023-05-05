@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <?php
+    include "cabecalho.php";
+    ?>
     <form method="post" action="salvar-usuario.php">
         <div class="container mt-5 ">
             <div class="row mb-4">
@@ -19,12 +22,7 @@
                         <label class="form-label" for="form3Example1" name="nome">Nome</label>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="form-outline">
-                        <input type="text" id="form3Example2" class="form-control" name="senha" />
-                        <label class="form-label" for="form3Example2" >Sobrenome</label>
-                    </div>
-                </div>
+
             </div>
 
             <div class="form-outline mb-4">
@@ -33,7 +31,7 @@
             </div>
 
             <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" />
+                <input type="password" id="form3Example4" class="form-control" name="senha" />
                 <label class="form-label" for="form3Example4">Crie sua senha</label>
             </div>
 
@@ -43,6 +41,7 @@
 
     </form>
     </div>
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
