@@ -64,8 +64,10 @@
                             <td> <?php echo $um_usuario["id"] ?> </td>
                             <td> <?php echo $um_usuario["nome"] ?> </td>
                             <td> <?php echo $um_usuario["email"] ?> </td>
-                            
-                            
+                            <td><a href="excluir-usurario.php?id=<?php echo $um_usuario["id"] ?>"><img src="excluir.png" alt="BOTAO-EXCLUIR" width="20px"></a>
+                                <a href="ver-usuario.php?id=<?php echo $um_usuario["id"]; ?>"><img src="ver.png" alt="OLHO-VER" width="20px"></a>
+                            </td>
+
                         </tr>
                     <?php
                     endwhile;
